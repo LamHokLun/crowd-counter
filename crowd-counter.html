@@ -5,16 +5,16 @@
     background-color:yellow;
     width:400px;
     height:711px;
-    transform: scale(120%);
-    transform-origin: 0%,-50%;
   }
-  
-  h1{
-  
+  div{
+  display:flex;
+  justify-content:center;
+  align-items:center;
   }
   </style>
 <body>
 <h1>Crowd Counter</h1>
+<div>
 <hr>
 <form onSubmit="myConfirm()" method="post">
   <label for="session">Session: </label>
@@ -50,7 +50,7 @@
 </form>
 <br>
 <hr>
-	
+</div>
 <script src="js/javascript.js" type="text/javascript">
 </script>
 <script src="js/csv.min.js" type="text/javascript">
