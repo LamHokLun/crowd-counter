@@ -53,11 +53,12 @@ url = window.URL.createObjectURL(blob);
 
 var a = document.createElement("a");
 a.href = url;
-a.target = "_blank";
+/*a.target = "_blank";
+n = 2;
+*/
 var fileName=time.value;
 a.download = "data"+fileName+".csv";
 a.click();
-n = 2;
 }
 
 
