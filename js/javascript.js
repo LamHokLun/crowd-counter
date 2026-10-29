@@ -53,7 +53,7 @@ url = window.URL.createObjectURL(blob);
 
 var a = document.createElement("a");
 a.href = url;
-a.target = _blank;
+a.target = "_blank";
 var fileName=time.value;
 a.download = "data"+fileName+".csv";
 a.click();
