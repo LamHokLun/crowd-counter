@@ -7,7 +7,7 @@ var btnPlus = document.getElementById("btnPlus");
 var btnMinus = document.getElementById("btnMinus");
 var slct = document.getElementById("slct");
 var select = document.getElementsByTagName("select");
-
+var data = [];
 /*-----------------------------------------------*/
 function myPlus(){
 visitor.value = n++;
@@ -33,6 +33,8 @@ else if (select[0].value == 12){time.value = "17:15-18:00";}
 }
 
 function myConfirm(){
+data = [["Session", "Time", "Visitor"],
+	[select[0].value,time.value,visitor.value]];
 // Set Item
 localStorage.setItem("Session", select[0].value);
 localStorage.setItem("Time", time.value);
@@ -43,7 +45,21 @@ document.write("<h3>The information are successfully submitted</h3><br>The data 
 document.write("Session: " + localStorage.getItem("Session") + "<br>");
 document.write("Time: " + localStorage.getItem("Time") + "<br>");
 document.write("Visitor: " + localStorage.getItem("Visitor") + "<br>");
+
+/*document.write(data[2]);*/
+var csv = CSV.serialize(data),
+blob = new Blob([csv], {type: "text/csv"}),
+url = window.URL.createObjectURL(blob);
+
+var a = document.createElement("a");
+a.href = url;
+var fileName=time.value;
+a.download = "data"+fileName+".csv";
+a.click();
+
 }
+
+
 /*-----------------------------------------------*/
 btnPlus.addEventListener("click", myPlus);
 btnMinus.addEventListener("click", myMinus);
