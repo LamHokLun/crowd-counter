@@ -56,7 +56,7 @@ a.href = url;
 var fileName=time.value;
 a.download = "data"+fileName+".csv";
 a.click();
-
+n = 2;
 }
 
 
