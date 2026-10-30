@@ -1,0 +1,24 @@
+@media screen and (max-width: 3840px){
+	body{
+		transform: scale(140%);
+		display: block;
+		position: relative;
+		margin-top: 6vh;
+		/*background-color: yellow;*/
+		}
+	}
+
+@media screen and (max-width: 440px){
+	body{
+		transform: scale(140%);
+		display: block;
+		position: relative;
+		margin-top: 7vh;
+		/*background-color: blue;*/
+		}
+	}
+	
+
+	div{
+		display: flex; align-items: center; justify-content: center;
+	}
